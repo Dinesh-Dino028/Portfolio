@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Portfolio Website</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('-o3ndogUWCTh7bfvA');
+        })();
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active" id="">Home</a>
+            <a href="#about" class="" id="">About</a>
+            <a href="#services" class="" id="">Services</a>
+            <a href="#portfolio" class="" id="">Portfolio</a>
+            <a href="#contact" class="" id="">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Dinesh</h1>
+            <h3>And I'm a <span>Software Developer</span></h3>
+            <p>A passionate Developer with a deep interest in coding, I strive to create innovative solutions and bring
+                ideas to life..</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/My Photo Home.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/Dinesh's Photo About.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Developer</h3>
+            <p>I am a dedicated Software Developer with a genuine passion for coding, continuously seeking new
+                opportunities to expand my knowledge and skills in the ever-evolving tech industry. Committed to
+                maintaining a professional lifestyle, I embrace a disciplined approach and strive for excellence in all
+                aspects of my work. With a strong dedication to personal growth, I constantly engage in learning and
+                staying up-to-date with the latest technologies, ensuring that I can deliver innovative solutions that
+                meet the dynamic demands of the digital world.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>As a Software Developer, I am currently engaged in the exciting realm of E-Commerce website
+                    development. My role encompasses various responsibilities, including building and supporting the
+                    platform, as well as actively handling live issues to ensure smooth operations. Currently, I am
+                    enthusiastically diving into the world of AWS, exploring new technologies and leveraging their
+                    capabilities to enhance the website's infrastructure and performance. It is an exhilarating journey
+                    that allows me to continuously expand my expertise and contribute to the growth and success of the
+                    organization.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/E-Commerce Website.JPG" alt="">
+                <div class="portfolio-layer">
+                    <h4>E-Commerce Website</h4>
+                    <p>In my portfolio of projects, I have successfully completed two notable endeavors. The first
+                        project involved the development of an engaging E-Commerce website, catering to both men and
+                        women, offering a diverse range of clothing and accessories. By implementing user-friendly
+                        navigation and seamless shopping experiences, the website provided a platform for customers to
+                        explore and purchase their desired products conveniently.
+                    </p>
+                    <a href="#home"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/Portfolio Website.JPG" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio Website</h4>
+                    <p>The second project focused on the creation of a professional portfolio website that showcases my
+                        expertise and achievements in the software development field. With a clean and visually
+                        appealing design, the website effectively communicates my skills, experience, and passion for my
+                        profession. It serves as a comprehensive platform for potential clients and employers to gain
+                        insights into my work and capabilities.
+
+                        <!-- Both projects represent my dedication to delivering high-quality solutions and my ability to
+                        adapt to different domains and requirements. Through these experiences, I have gained invaluable
+                        knowledge, honed my technical skills, and demonstrated my commitment to creating impactful
+                        digital experiences. -->
+                    </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-- <div class="portfolio-box">
+                <img src="images/My Photo.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span> Me!</span></h2>
+        <form onsubmit="sendEmail(); reset(); return false">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" id="mobileNumber" placeholder="Mobile Number">
+                <input type="text" id="emailSubject" placeholder="Email Subject">
+            </div>
+            <textarea name="txtmessage" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Dinesh | All Rights Reserved. </p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- SMTP Email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- custom script -->
+    <script src="Script/script.js"></script>
+
+</body>
+
+</html>
