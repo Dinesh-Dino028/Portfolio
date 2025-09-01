@@ -97,7 +97,9 @@ section {
 }
 
 .home-img img {
-  width: 35vw;
+  width: 28vw;
+  height: auto;
+  margin: 4rem;
   animation: floatImage 4s ease-in-out infinite;
 }
 
