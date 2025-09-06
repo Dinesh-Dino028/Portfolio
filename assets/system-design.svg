@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#0ef; stroke:#07121a; stroke-width:2px; }
+    .subbox { fill:#323946; stroke:#07121a; stroke-width:1px; }
+    .text { font-family: Arial, Helvetica, sans-serif; font-size:14px; fill:#ffffff; }
+    .title { font-size:16px; font-weight:700; }
+    .arrow { stroke:#ffffff; stroke-width:2px; fill:none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" />
+    </marker>
+  </defs>
+
+  <!-- Client -->
+  <rect x="40" y="40" width="200" height="80" rx="8" class="box" />
+  <text x="140" y="65" text-anchor="middle" class="text title">Browser / Client</text>
+  <text x="140" y="85" text-anchor="middle" class="text">HTML, CSS, JS</text>
+
+  <!-- Static Host -->
+  <rect x="300" y="40" width="200" height="80" rx="8" class="subbox" />
+  <text x="400" y="65" text-anchor="middle" class="text title">Static Host</text>
+  <text x="400" y="85" text-anchor="middle" class="text">GitHub Pages / Netlify / S3</text>
+
+  <!-- Third party / Serverless -->
+  <rect x="560" y="40" width="200" height="80" rx="8" class="box" />
+  <text x="660" y="65" text-anchor="middle" class="text title">Serverless / Services</text>
+  <text x="660" y="85" text-anchor="middle" class="text">EmailJS, CDN, Lambda / Functions</text>
+
+  <!-- arrows -->
+  <path d="M240 80 L300 80" class="arrow" />
+  <path d="M500 80 L560 80" class="arrow" />
+
+  <!-- Contact flow (bottom) -->
+  <rect x="40" y="200" width="260" height="100" rx="8" class="subbox" />
+  <text x="170" y="230" text-anchor="middle" class="text title">Contact Form</text>
+  <text x="170" y="250" text-anchor="middle" class="text">collects input & submits</text>
+
+  <rect x="330" y="200" width="430" height="100" rx="8" class="subbox" />
+  <text x="545" y="230" text-anchor="middle" class="text title">Serverless Endpoint (recommended)</text>
+  <text x="545" y="250" text-anchor="middle" class="text">Receives form → sends email securely</text>
+
+  <path d="M300 230 L330 230" class="arrow" />
+
+  <!-- Footer note -->
+  <text x="400" y="330" text-anchor="middle" class="text">Diagram: prefer serverless/email relay to avoid exposing client keys</text>
+</svg>
