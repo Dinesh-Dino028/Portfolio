@@ -65,34 +65,9 @@ function sendEmail() {
         mobileNumber: document.getElementById("mobileNumber").value,
         message: document.getElementById("message").value
     }
-    // Two options to send email:
-    // 1) Client-side using EmailJS (quick, but exposes public keys)
-    // 2) Recommended: send to your serverless endpoint which will relay the email securely
-
-    // Option A: EmailJS (uncomment and set correct service/template IDs if you choose this)
-    // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params).then(function (response) {
-    //     alert('Successfully Email Sent via EmailJS!');
-    // }).catch(function(err){
-    //     alert('EmailJS send failed: ' + err);
-    // });
-
-    // Option B: Post to a serverless endpoint (recommended for production)
-    const SERVERLESS_ENDPOINT = '/.netlify/functions/sendEmail'; // example for Netlify
-
-    fetch(SERVERLESS_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(params)
-    }).then(res => {
-        if (!res.ok) throw new Error('Network response was not ok');
-        return res.json();
-    }).then(data => {
-        alert('Successfully Email Sent via serverless function!');
-    }).catch(err => {
-        // fallback: if serverless fails and you have EmailJS configured, you can try that
-        console.error('Send email error:', err);
-        alert('Failed to send email via serverless endpoint. Check console for details.');
-    });
+    emailjs.send("service_z9iv71h", "template_ag5xvve", params).then(function (response) {
+        alert('Sucessfully Email Sent!');
+    })
 
 
 };
